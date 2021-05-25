@@ -52,7 +52,7 @@ async def on_ready():
         await message.channel.send("**Server Status: **:x: ")
 
       #await message.channel.send(get_serverplayers())
-      print('testing testing')
+      
       
   
 
