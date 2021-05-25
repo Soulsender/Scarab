@@ -51,7 +51,8 @@ async def on_ready():
       if not is_online:
         await message.channel.send("**Server Status: **:x: ")
 
-      await message.channel.send(get_serverplayers())
+      #await message.channel.send(get_serverplayers())
+      print('test')
   
 
 
