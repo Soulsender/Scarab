@@ -5,6 +5,7 @@ import random
 import json
 from keep_alive import keep_alive
 
+
 client = discord.Client()
 bot_token = os.environ['TOKEN']
 
@@ -66,11 +67,16 @@ async def on_ready():
     if message.content.startswith('$help'):
       embedVar = discord.Embed(title="__Command Menu__", color=0x2b2a2a)
       embedVar.add_field(name="Useful", value="$help - send help menu \n $server - get infomation about our minecraft server \n $market - open the market (WIP)",inline=False)
-      embedVar.add_field(name="Miscellanous", value='$insult - send randomly generated insult \n $hello - say hello! \n $sheesh - sheesh', inline=False)
+      embedVar.add_field(name="Miscellanous", value='$insult - send randomly generated insult \n $hello - say hello! \n $sheesh - sheesh \n $wap - no please dont', inline=False)
       await message.channel.send(embed=embedVar)
 
     if message.content.startswith('$hello'):
       await message.channel.send("Hello!")
+
+    if message.content.startswith('$wap'):
+      f = open("wop.txt", 'r')
+      for word in f:
+        await message.channel.send(word)
 
     if message.content.startswith('cringe'):
       await message.channel.send("^ haha idiot")
