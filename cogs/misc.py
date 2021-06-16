@@ -38,3 +38,4 @@ if message.content == '$sheesh':
 
 def setup(client):
   client.add_cog(Misc(client))
+#

@@ -1,8 +1,5 @@
 import discord
 import os
-import requests
-import random
-
 from keep_alive import keep_alive
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -25,8 +22,8 @@ for filename in os.listdir('./cogs'):
 @client.event
 async def on_ready():
   print('{0.user} standing by'.format(client))
-  #await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='$help'))
-  await client.change_presence(activity = discord.Activity(type=discord.ActivityType.watching, name='In Maintenance'))
+  await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='$help'))
+  #await client.change_presence(activity = discord.Activity(type=discord.ActivityType.watching, name='In Maintenance'))
 
 @client.command()
 async def help(ctx):

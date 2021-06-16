@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import requests
+import random
 
 class Useful(commands.Cog):
   def __init__(self, client):
@@ -36,55 +37,17 @@ class Useful(commands.Cog):
   @commands.command()
   async def rollhelp(self, ctx):
     embed = discord.Embed(title="__Dice Roll Menu__", color=0x4287f5)
-    embed.add_field(name="Dice Types", value="D20 \n D12 \n D10 \n D100 \n D8 \n D6 \n D4 \n\n Use command with **$roll {dice}**",inline=False)
+    embed.add_field(name="Dice Types", value="D20 \n D12 \n D10 \n D100 \n D8 \n D6 \n D4 \n\n Use command with **$roll {dice type}  {# of dice}** \n Ex. *$roll 20 3*",inline=False)
     await ctx.send(embed=embed)
 
   @commands.command()
-  async def roll(ctx, dicetype=20, dicenum=1):
-    return
-  
-'''
-  if message.content == '$roll d20':
-    value = random.randint(1, 20)
-    await message.channel.send('**Rolled a D20!**')
-    if value == 20:
-      await message.channel.send('**NAT 20!**')
-    else:
-      await message.channel.send(value)
-
-  if message.content == '$roll d12':
-    value = random.randint(1, 12)
-    await message.channel.send('**Rolled a D12!**')
-    await message.channel.send(value)
-
-  if message.content == '$roll d10':
-    value = random.randint(1, 10)
-    await message.channel.send('**Rolled a D10!**')
-    await message.channel.send(value)
-
-  if message.content == '$roll d100':
-    value = random.randint(1, 100)
-    await message.channel.send('**Rolled a D100!**')
-    await message.channel.send(value)
-
-  if message.content == '$roll d8':
-    value = random.randint(1, 8)
-    await message.channel.send('**Rolled a D8!**')
-    await message.channel.send(value)
-
-  if message.content == '$roll d6':
-    value = random.randint(1, 6)
-    await message.channel.send('**Rolled a D6!**')
-    await message.channel.send(value)
-
-  if message.content == '$roll d4':
-    value = random.randint(1, 4)
-    await message.channel.send('**Rolled a D4!**')
-    await message.channel.send(value)
-
-'''
-
-
-
+  async def roll(self, ctx, dicetype=20, dicenum=1):
+    if dicenum <= 20:
+      for _ in range(dicenum):
+        await ctx.send(random.randint(1, dicetype))
+    if dicenum > 20:
+      await ctx.send('Invalid number of rolls')
+ 
 def setup(client):
   client.add_cog(Useful(client))
+#

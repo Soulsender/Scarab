@@ -13,7 +13,7 @@ class Admin(commands.Cog):
   async def purge(self, ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
-  @commands.command()
+  '''@commands.command()
   async def kick(self, ctx, member : discord.Member):
     await member.kick()
 
@@ -31,7 +31,8 @@ class Admin(commands.Cog):
       if (user.name, user.discriminator) == (member_name, member_discriminator):
         await ctx.guild.unban(user)
         await ctx.send('Unbanned {user.name}#{user.discriminator')
-        return
+        return'''
 
 def setup(client):
   client.add_cog(Admin(client))
+#
