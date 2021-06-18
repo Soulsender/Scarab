@@ -20,11 +20,6 @@ class Misc(commands.Cog):
 if message.content == '$hello':
     await message.channel.send("Hello!")
 
-if message.content == '$wap':
-  f = open("wop.txt", 'r')
-  for word in f:
-    await message.channel.send(word)
-
 if message.content == 'cringe':
   await message.channel.send("^ haha idiot")
 
@@ -38,4 +33,3 @@ if message.content == '$sheesh':
 
 def setup(client):
   client.add_cog(Misc(client))
-#
