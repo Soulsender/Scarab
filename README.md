@@ -15,3 +15,4 @@ If you have a bug report, or a request for something to be added, please refer t
 - Insults using detailed randomly generated API.
 - **(WIP)** Admin tools. **(These have been temporaily disabled until I add a limitation on users with access.)**
 - **(WIP)** Minecraft custom marketplace to coodinate selling and buying of ingame items and trade offers.
+- Custom server-specific prefixes to make more viable with other bots.
