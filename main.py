@@ -1,17 +1,13 @@
 import discord
 import os
 from keep_alive import keep_alive
-from discord.ext import commands
 from discord.ext.commands import Bot
 import json
 
 
-def getprefix(client, message):
-  with open('prefixes.json', 'r') as f:
-    prefixes = json.load(f)
-  return prefixes[str(message.guild.id)]
 
-client = Bot(getprefix)
+
+client = Bot('$')
 client.remove_command('help')
 
 @client.command()
@@ -31,36 +27,6 @@ async def on_ready():
   print('{0.user} standing by'.format(client))
   await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='$help'))
   #await client.change_presence(activity = discord.Activity(type=discord.ActivityType.watching, name='In Maintenance'))
-
-@client.event
-async def on_guild_join(guild):
-  with open('prefixes.json', 'r') as f:
-    prefixes = json.load(f)
-    
-  prefixes[str(guild.id)] = "$"
-
-  with open('prefixes.json', 'w') as f:
-    json.dump(prefixes, f, indent=2)
-
-@client.event
-async def on_guild_remove(guild):
-  with open('prefixes.json', 'r') as f:
-    prefixes = json.load(f)
-
-  prefixes.pop(str(guild.id))
-
-  with open('prefixes.json', 'w') as f:
-    json.dump(prefixes, f, indent=2)
-
-@client.command()
-async def changeprefix(ctx, prefix):
-  with open('prefixes.json', 'r') as f:
-    prefixes = json.load(f)
-    
-  prefixes[str(ctx.guild.id)] = prefix
-
-  with open('prefixes.json', 'w') as f:
-    json.dump(prefixes, f, indent=2)
 
 @client.command()
 async def adminhelp(ctx):
