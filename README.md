@@ -1,5 +1,5 @@
 # **Scarab Discord Bot**
-## This is my repository for the custom discord SCARAB bot.
+#### This is my repository for the custom discord SCARAB bot.
 
 ### I grant access to use my code, to use and edit. **Please do not pass it along as your own.** I have included my tutorial sources below.
 
@@ -17,6 +17,9 @@ If you have a bug report, or a request for something to be added, please refer t
 - Insults using detailed randomly generated API.
 - **(WIP)** Admin tools. **(These have been temporaily disabled until I add a limitation on users with access.)**
 - **(WIP)** Minecraft custom marketplace to coodinate selling and buying of ingame items and trade offers.
+
+## **Usage**
+Currently, the bot is in alpha, and not ready to be deployed. Once it it, I will update this statment.
 
 ### **Sources**
  - https://www.youtube.com/watch?v=nW8c7vT6Hl4&t=1s&ab_channel=LucasLucas
