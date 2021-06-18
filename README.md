@@ -1,7 +1,7 @@
 # **Scarab Discord Bot**
-This is my repository for the custom discord SCARAB bot.
+##This is my repository for the custom discord SCARAB bot.
 
-### I grant access to use my code, to use and edit. **Please do not pass it along as yours.** I have included my tutorial sources below.
+### I grant access to use my code, to use and edit. **Please do not pass it along as your own.** I have included my tutorial sources below.
 
 Please see the [ChangeLog](https://github.com/Soulsender/scarabbot/blob/master/CHANGELOG.md) for updates.
 
