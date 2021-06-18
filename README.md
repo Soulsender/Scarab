@@ -18,7 +18,7 @@ If you have a bug report, or a request for something to be added, please refer t
 - **(WIP)** Admin tools. **(These have been temporaily disabled until I add a limitation on users with access.)**
 - **(WIP)** Minecraft custom marketplace to coodinate selling and buying of ingame items and trade offers.
 
-## **Usage**
+### **Usage**
 Currently, the bot is in alpha, and not ready to be deployed. Once it it, I will update this statment.
 
 ### **Sources**
