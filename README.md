@@ -20,5 +20,5 @@ If you have a bug report, or a request for something to be added, please refer t
 - Custom server-specific prefixes to make more viable with other bots.
 
 ### **Sources**
-https://www.youtube.com/watch?v=nW8c7vT6Hl4&t=1s&ab_channel=LucasLucas
-https://www.youtube.com/watch?v=SPTfmiYiuok&t=2829s
+ - https://www.youtube.com/watch?v=nW8c7vT6Hl4&t=1s&ab_channel=LucasLucas
+ - https://www.youtube.com/watch?v=SPTfmiYiuok&t=2829s
