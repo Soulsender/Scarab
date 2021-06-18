@@ -3,9 +3,6 @@
 
 ======================================================================================
 
-June 17, 2021
- - Added server-specific custom prefixes.
- - Started server-specifc minecraft connections; may be scraped due to privacy reasons.
 
 June 16, 2021
  - Dice roll updated to 1.1.
