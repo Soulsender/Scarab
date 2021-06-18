@@ -2,20 +2,75 @@ import discord
 from discord.ext import commands
 import requests
 import random
+import json
+
+
 
 class Useful(commands.Cog):
   def __init__(self, client):
     self.client = client
 
+  def info(self, ctx, client, message):
+    with open('serversetup.json', 'r') as f:
+      ip = json.load(f)
+      port = json.load(f)
+      platform = json.load(f)
+    return ip, port, platform[str(message.guild.id)]
+
+  @commands.Cog.listener()
+  async def on_guild_join(guild):
+    with open('serversetup.json', 'r') as f:
+      ip = json.load(f)
+      port = json.load(f)
+      platform = json.load(f)
+    ip[str(guild.id)] = 'No ip selecte'
+    port[str(guild.id)] = 'No port selected'
+    platform[str(guild.id)] = 'No platform selected'
+    with open('serversetup.json', 'w') as f:
+      json.dump(ip, f, indent=2)
+      json.dump(port, f, indent=2)
+      json.dump(platform, f, indent=2)
+
+  @commands.Cog.listener()
+  async def on_guild_remove(guild):
+    with open('serversetup.json', 'r') as f:
+      ip = json.load(f)
+      port = json.load(f)
+      platform = json.load(f)
+    ip.pop[str(guild.id)]
+    port.pop[str(guild.id)]
+    platform.pop[str(guild.id)]
+    with open('serversetup.json', 'w') as f:
+      json.dump(ip, f, indent=2)
+      json.dump(port, f, indent=2)
+      json.dump(platform, f, indent=2)
+
+  @commands.command()
+  async def setup(self, ctx, platform, ip, port):
+    with open('serversetup.json', 'r') as f:
+      ip = json.load(f)
+      port = json.load(f)
+      platform = json.load(f)
+    ip[str(ctx.guild.id)] = ip
+    port[str(ctx.guild.id)] = port
+    platform[str(ctx.guild.id)] = platform
+    with open('serversetup.json', 'w') as f:
+      json.dump(ip, f, indent=2)
+      json.dump(port, f, indent=2)
+      json.dump(platform, f, indent=2)
+    return ip, port, platform
+
   @commands.command()
   async def server(self, ctx):
+  
+
     def get_serverinfo():
-      response = requests.get("https://api.mcsrvstat.us/bedrock/2/142.44.145.32:25626")
+      response = requests.get("https://api.mcsrvstat.us/bedrock/2/ + ip +: + port")
       json_data = response.json()
       say_serverinfo = json_data["players"]['online']
       return say_serverinfo
     def get_serverplayers():
-      response = requests.get("https://api.mcsrvstat.us/bedrock/2/142.44.145.32:25626")
+      response = requests.get("https://api.mcsrvstat.us/bedrock/2/ + ip + : + port")
       json_data = response.json()
       say_serverplayers = json_data['players']['online']
       return say_serverplayers
