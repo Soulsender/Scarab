@@ -31,15 +31,15 @@ async def on_ready():
 @client.command()
 async def adminhelp(ctx):
   embed = discord.Embed(title="__Admin Menu__", color=0xeb4034)
-  embed.add_field(name="Commands", value="\n $changeprefix {prefix} - changes server prefix to custom prefix \n $ban {user} - bans user \n $kick {user} - kicks user \n $unban {user} - unbans user \n $purge {number of messages} - deletes set number of messages in current channel",inline=False)
+  embed.add_field(name="Commands", value="\n $ban {user} - bans user \n $kick {user} - kicks user \n $unban {user} - unbans user \n $purge {number of messages} - deletes set number of messages in current channel",inline=False)
   await ctx.send(embed=embed)
 
 @client.command()
 async def help(ctx):
   embed = discord.Embed(title="__Command Menu__", color=0x2b2a2a)
-  embed.add_field(name="Useful", value="$help {type}- send help menu. Menu types include **admin**, **roll**\n $server - get infomation about our minecraft server \n $market - open the market (WIP) \n $rollhelp - open dice roll menu",inline=False)
-  embed.add_field(name="Miscellanous", value='$insult - send randomly generated insult \n\n *FOLLOWING ARE TEMPORARILY DISABLED* \n\n $hello - say hello! \n $sheesh - sheesh \n $wap - no please dont', inline=False)
-  embed.add_field(name="Menus", value='$rollhelp - dice roll menu \n $adminhelp - admin menu', inline=False)
+  embed.add_field(name="Useful", value="$server - get infomation about our minecraft server \n $market - open the market (WIP) \n $rollhelp - open dice roll menu",inline=False)
+  embed.add_field(name="Miscellanous", value='$insult - send randomly generated insult \n $sheesh - sheesh', inline=False)
+  embed.add_field(name="Menus", value='$rollhelp - dice roll menu \n $adminhelp - admin menu \n $help - send help menu', inline=False)
   await ctx.send(embed=embed)
 
 keep_alive()
