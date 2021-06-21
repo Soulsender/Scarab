@@ -4,7 +4,7 @@ from keep_alive import keep_alive
 from discord.ext.commands import Bot
 import json
 
-
+# test for pycharm
 
 
 client = Bot('$')
