@@ -131,6 +131,7 @@ fabric.properties
 __pycache__/
 *.py[cod]
 *$py.class
+cogs/__pycache__/
 
 # C extensions
 *.so
@@ -339,6 +340,7 @@ local.properties
 __pycache__/
 *.py[cod]
 *$py.class
+cogs/__pycache__/
 
 # C extensions
 *.so
@@ -479,6 +481,7 @@ cython_debug/
 __pycache__/
 *.py[cod]
 *$py.class
+cogs/__pycache__/
 
 # C extensions
 *.so
