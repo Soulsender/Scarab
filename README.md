@@ -1,4 +1,8 @@
 # **Scarab Discord Bot**
+# WARNING: IN IT'S CURRENT STATE THIS BOT IS DANGEROUS AND UNSTABLE. DO NOT ATTEMPT TO CLONE AND RUN UNTIL I FIX IT.
+
+
+
 #### This is my repository for the custom discord SCARAB bot.
 
 ### I grant access to use my code, to use and edit. **Please do not pass it along as your own.** I have included my tutorial sources below.
