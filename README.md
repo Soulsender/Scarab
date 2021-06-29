@@ -18,7 +18,7 @@ If you have a bug report, or a request for something to be added, please refer t
   - etc.
 - **(WIP)** Possibility to link a minecraft bedrock server. **(At the moment this feature is suspended, as I have only implemented my own server and not the ability to add your own.)**
 - Insults using detailed randomly generated API.
-- **(WIP)** Admin tools. **(These have been temporaily disabled until I add a limitation on users with access.)**
+- Admin tools such as purging, banning, kicking.
 - **(WIP)** Minecraft custom marketplace to coodinate selling and buying of ingame items and trade offers.
 
 ### **Usage**
