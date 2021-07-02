@@ -29,6 +29,44 @@ async def on_ready():
   #await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='$help'))
   #await client.change_presence(activity = discord.Activity(type=discord.ActivityType.watching, name='In Maintenance'))
 
+@client.event
+async def on_guild_join(guild: discord.Guild) -> None:
+  if guild.system_channel == None:
+    print('There is no system channel')
+    if guild.rules_channel == None:
+      print('There is no rule channel')
+
+
+
+
+    else:
+      print(guild.rules_channel, 'is the rules channel')
+  else:
+    print(guild.system_channel, 'is the system channel')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  '''embed = discord.Embed(title="Hello!", color=0xeb4034)
+  embed.add_field(name="My name is Scarab!", value="I am a multipurpose bot! You can see many of my functions using the $help command. \n\n On joining this server, I have created a role named @Bot Admin. Please give this role to anyone you grant admin permissions.",inline=False)
+  channel = guild.get_channel(id)
+  channel.send(embed=embed)
+  await guild.create_role(name="Bot Admin")'''
+
 @client.command()
 async def adminhelp(ctx):
   embed = discord.Embed(title="__Admin Menu__", color=0xeb4034)
