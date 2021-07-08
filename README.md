@@ -16,10 +16,12 @@ If you have a bug report, or a request for something to be added, please refer t
   - D6
   - D100
   - etc.
-- **(WIP)** Possibility to link a minecraft bedrock server. **(At the moment this feature is suspended, as I have only implemented my own server and not the ability to add your own.)**
+
 - Insults using detailed randomly generated API.
-- Admin tools such as purging, banning, kicking.
+- Admin tools such as purging, banning, kicking. These are actived if a user has the @Bot Admin role, which is created when the bot joins the server. 
+
 - **(WIP)** Minecraft custom marketplace to coodinate selling and buying of ingame items and trade offers.
+- **(WIP)** Possibility to link a minecraft bedrock server. **(At the moment this feature is suspended, as I have only implemented my own server and not the ability to add your own.)**
 
 ### **Usage**
 Currently, the bot is in alpha, and not ready to be deployed. Once it it, I will update this statment.

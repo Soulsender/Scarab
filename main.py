@@ -1,11 +1,10 @@
 import discord
 import os
 from keep_alive import keep_alive
-from discord.ext.commands import Bot
 from discord.ext import commands
 
 
-client = commands.Bot(command_prefix="$")
+client = commands.Bot(command_prefix="$", activity = discord.Game(name="$help"))
 client.remove_command('help')
 
 
@@ -28,6 +27,47 @@ async def on_ready():
   # DO NOT DO ANYTHING IN on_ready!
   #await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='$help'))
   #await client.change_presence(activity = discord.Activity(type=discord.ActivityType.watching, name='In Maintenance'))
+
+@client.event
+async def on_guild_join(guild: discord.Guild) -> None:
+
+  embed = discord.Embed(title="Hello!", color=0xeb4034)
+  embed.add_field(name="My name is Scarab!", value="I am a multipurpose bot! You can see many of my functions using the $help command. \n\n On joining this server, I have created a role named @Bot Admin. Please give this role to anyone you grant admin permissions.",inline=False)
+  await guild.create_role(name="Bot Admin")
+
+  if guild.system_channel == None:
+    print('There is no system channel')
+    if guild.rules_channel == None:
+      print('There is no rule channel. Sending welcome message to first channel listed.')
+      await guild.text_channels[0].send(embed=embed)
+
+    else:
+      print(guild.rules_channel, 'is the rules channel')
+      await guild.text_channels[0].send(embed=embed)
+      return
+  else:
+    print(guild.system_channel, 'is the system channel')
+    await guild.text_channels[0].send(embed=embed)
+    return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 @client.command()
 async def adminhelp(ctx):
