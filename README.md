@@ -29,3 +29,5 @@ Currently, the bot is in alpha, and not ready to be deployed. Once it it, I will
 ### **Sources**
  - https://www.youtube.com/watch?v=nW8c7vT6Hl4&t=1s&ab_channel=LucasLucas
  - https://www.youtube.com/watch?v=SPTfmiYiuok&t=2829s
+ - The discord.py server
+ - discord.py docs
