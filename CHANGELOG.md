@@ -3,13 +3,18 @@
 
 ======================================================================================
 
+July 8, 2021
+ - Finished rework on activity & status.
+ - Added welcome message.
+
+July 2, 2021
+ - Reworked dangerous on_ready activity.
 
 June 16, 2021
  - Dice roll updated to 1.1.
 
 June 15, 2021
   - Finished dice roll function 1.0.
-  - Started working on muli-server infomation page.
 
 June 14, 2021
   - Finished Rework 1.0 (not to be confused with 2.0 I just named it stupid.)
