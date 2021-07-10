@@ -25,6 +25,7 @@ If you have a bug report, or a request for something to be added, please refer t
 
 ### **Usage**
 Currently, the bot is in alpha, and not ready to be deployed. Once it it, I will update this statment.
+[Temporary Usage doc](https://github.com/Soulsender/scarabbot/blob/master/USAGE.md)
 
 ### **Sources**
  - https://www.youtube.com/watch?v=nW8c7vT6Hl4&t=1s&ab_channel=LucasLucas
