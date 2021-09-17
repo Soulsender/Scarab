@@ -5,4 +5,4 @@ To use this bot, you may invite via the invite link.
 If you wish to modify the bot, there are some things you must edit.
 
 #### Token
-You will need to add your own token in `main.py` under `client.run()`. You will also need to make your own discord developer account.
+You will need to add your own token in `main.py` under `client.run()`. You will also need to make your own discord developer account to aquire a token.
