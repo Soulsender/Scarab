@@ -5,8 +5,6 @@ import random
 import json
 import os
 
-
-
 class Useful(commands.Cog):
   def __init__(self, client):
     self.client = client
@@ -15,18 +13,20 @@ class Useful(commands.Cog):
   async def on_ready(self):
     print('Use Online')
     
-
-
   @commands.command()
   async def server(self, ctx):
+    #https://api.mcsrvstat.us/2/172.105.27.82
 
     def get_serverinfo():
-      response = requests.get("https://api.mcsrvstat.us/bedrock/2/" + os.getenv('server'))
+      string = ("https://api.mcsrvstat.us/2/" + os.getenv('SERVER'))
+      response = requests.get(string)
       json_data = response.json()
-      say_serverinfo = json_data["players"]['online']
+      say_serverinfo = json_data['online']
       return say_serverinfo
+
     def get_serverplayers():
-      response = requests.get("https://api.mcsrvstat.us/bedrock/2/" + os.getenv('server'))
+      string = ("https://api.mcsrvstat.us/2/" + os.getenv('SERVER'))
+      response = requests.get(string)
       json_data = response.json()
       say_serverplayers = json_data['players']['online']
       return say_serverplayers
@@ -41,8 +41,8 @@ class Useful(commands.Cog):
 
     embed = discord.Embed(title="__Server Info__", description="Collection of infomation regarding server IP, status, and changes. \n Please keep in mind data *ONLY* updates every 5 minutes or so.", color=0x00ff00)
     embed.add_field(name="Connection Info", value=os.getenv('server'),inline=False)
-    embed.add_field(name="Current Status", value=onlineview, inline=False)
-    embed.add_field(name="Players Online", value=players_online + '/20', inline=False)
+    embed.add_field(name="Current Status", value=str(onlineview), inline=False)
+    embed.add_field(name="Players Online", value=str(players_online) + '/20', inline=False)
     await ctx.send(embed=embed)
 
   @commands.command()
@@ -61,4 +61,3 @@ class Useful(commands.Cog):
  
 def setup(client):
   client.add_cog(Useful(client))
-#

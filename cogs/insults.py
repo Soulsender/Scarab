@@ -7,7 +7,7 @@ class Misc(commands.Cog):
 
   @commands.Cog.listener()
   async def on_ready(self):
-    print('Misc Online')
+    print('Insults Online')
     
   @commands.command()
   async def insult(self, ctx):
@@ -17,11 +17,6 @@ class Misc(commands.Cog):
       say_insult = json_data["insult"]
       return say_insult
     await ctx.send(get_insult())
-
-  @commands.command()
-  async def sheesh(self, ctx):
-    # my friend asked me if I could add this
-    await ctx.send("sheeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeesh")
     
 def setup(client):
   client.add_cog(Misc(client))

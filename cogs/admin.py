@@ -8,6 +8,12 @@ class Admin(commands.Cog):
   @commands.Cog.listener()
   async def on_ready(self):
     print('Admin Online')
+  
+  @commands.command()
+  async def adminhelp(self, ctx):
+    embed = discord.Embed(title="__Admin Menu__", color=0xeb4034)
+    embed.add_field(name="Commands", value="\n $ban {user} - bans user \n $kick {user} - kicks user \n $unban {user} - unbans user \n $purge {number of messages} - deletes set number of messages in current channel \n $createbotadmin - creates @Bot Admin role \n\n **BE ADVISED:** ANYONE WITH ROLE @Bot Admin WILL BE GIVEN THESE PERMISSIONS. \n *If this role does not exist, please make one using $createbotadmin (NOTE: This is disabled at the moment).*",inline=False)
+    await ctx.send(embed=embed)
 
   '''@commands.command()
   async def createbotadmin(self, ctx):
