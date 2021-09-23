@@ -2,6 +2,10 @@
 ### Change to the bot will be listed here, in order from most recent to oldest.
 
 ======================================================================================
+September 23, 2021
+ - Fixed a cog loader bug
+ - Organized cogs
+
 September 17, 2021
  - Final touches for release
 
