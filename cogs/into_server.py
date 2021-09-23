@@ -1,7 +1,7 @@
 from discord.ext import commands
 import discord
 
-class Admin(commands.Cog):
+class into_server(commands.Cog):
   def __init__(self, client):
     self.client = client
 
@@ -9,8 +9,8 @@ class Admin(commands.Cog):
   async def on_ready(self):
     print('Into_server Online')
 
-  @commands.event
-  async def on_guild_join(self, guild: discord.Guild) -> None:
+  @commands.Cog.listener()
+  async def on_guild_join(self, ctx, guild: discord.Guild) -> None:
     embed = discord.Embed(title="Hello!", color=0xeb4034)
     embed.add_field(name="My name is Scarab!", value="I am a multipurpose bot! You can see many of my functions using the $help command. \n\n On joining this server, I have created a role named @Bot Admin. Please give this role to anyone you grant admin permissions.",inline=False)
     await guild.create_role(name="Bot Admin")
@@ -29,3 +29,6 @@ class Admin(commands.Cog):
       print(guild.system_channel, 'is the system channel')
       await guild.text_channels[0].send(embed=embed)
       return
+
+def setup(client):
+  client.add_cog(into_server(client))

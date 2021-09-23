@@ -1,5 +1,6 @@
 from discord.ext import commands
 import requests
+import discord
 
 class Misc(commands.Cog):
   def __init__(self, client):
