@@ -2,6 +2,8 @@
 ### Change to the bot will be listed here, in order from most recent to oldest.
 
 ======================================================================================
+September 17, 2021
+ - Final touches for release
 
 July 8, 2021
  - Finished rework on activity & status.

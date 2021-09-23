@@ -6,9 +6,11 @@
 
 ### I grant access to use my code, to use and edit. **Please do not pass it along as your own.**
 
-Please see the [ChangeLog](https://github.com/Soulsender/scarabbot/blob/master/CHANGELOG.md) for updates.
+Please see the [ChangeLog](https://github.com/Soulsender/scarabbot/blob/master/CHANGELOG.md) for updates. 
 
 If you have a bug report, or a request for something to be added, please refer to the [issues](https://github.com/Soulsender/scarabbot/issues) tab.
+
+[Invite link](https://discord.com/api/oauth2/authorize?client_id=840325557806694410&permissions=8&scope=bot)
 
 ### **Features**
 - Dice rolling with multiple dice, and dice types such as;
