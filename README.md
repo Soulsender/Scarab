@@ -21,6 +21,7 @@ If you have a bug report, or a request for something to be added, please refer t
 
 - Insults using detailed randomly generated API.
 - Admin tools such as purging, banning, kicking. These are actived if a user has the @Bot Admin role, which is created when the bot joins the server. 
+- Ability to use minecraft server IP and port to request infomation about a given server. See usage docs.
 
 ### **Usage**
 View the [USAGE](https://github.com/Soulsender/scarabbot/blob/master/USAGE.md) document
