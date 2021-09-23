@@ -7,8 +7,8 @@ If you wish to modify the bot, there are some things you must edit.
 #### Token
 You will need to add your own token in `main.py` under `client.run()`. 
 
-### Discord Developer 
+#### Discord Developer 
 You will also need to make your own [discord developer](https://discord.com/developers/docs/intro) account to aquire a token.
 
-### Invite Link
+#### Invite Link
 You will need to make an invite link in your discord developer portal.
