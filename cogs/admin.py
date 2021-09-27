@@ -15,11 +15,11 @@ class Admin(commands.Cog):
     embed.add_field(name="Commands", value="\n $ban {user} - bans user \n $kick {user} - kicks user \n $unban {user} - unbans user \n $purge {number of messages} - deletes set number of messages in current channel \n $createbotadmin - creates @Bot Admin role \n\n **BE ADVISED:** ANYONE WITH ROLE @Bot Admin WILL BE GIVEN THESE PERMISSIONS. \n *If this role does not exist, please make one using $createbotadmin (NOTE: This is disabled at the moment).*",inline=False)
     await ctx.send(embed=embed)
 
-  '''@commands.command()
+  @commands.command()
   async def createbotadmin(self, ctx):
     guild = ctx.guild
     await guild.create_role(name="Bot Admin")
-    await ctx.send('Created @Bot Admin. Please be cautious, as any users you assign this role will be given admin permissions.')'''
+    await ctx.send('Created @Bot Admin. Please be cautious, as any users you assign this role will be given admin permissions.')
   
   @commands.command()
   @commands.has_role("Bot Admin")
