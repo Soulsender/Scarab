@@ -2,7 +2,7 @@ from discord.ext import commands
 import requests
 import discord
 
-class Misc(commands.Cog):
+class insults(commands.Cog):
   def __init__(self, client):
     self.client = client
 
@@ -20,4 +20,4 @@ class Misc(commands.Cog):
     await ctx.send(get_insult())
     
 def setup(client):
-  client.add_cog(Misc(client))
+  client.add_cog(insults(client))
