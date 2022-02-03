@@ -1,8 +1,10 @@
 import discord
 import os
+from dotenv import load_dotenv
 from keep_alive import keep_alive
 from discord.ext import commands
 
+load_dotenv()
 
 client = commands.Bot(command_prefix="$", activity = discord.Game(name="$help"))
 client.remove_command('help')
