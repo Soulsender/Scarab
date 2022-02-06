@@ -9,9 +9,9 @@ class mc_server(commands.Cog):
 
   @commands.Cog.listener()
   async def on_ready(self):
-    print('Use Online')
+    print('server Online')
     
-  @commands.command()
+  @commands.slash_command(name='server', description='gives infomation about the minecraft server')
   async def server(self, ctx):
     #https://api.mcsrvstat.us/2/172.105.27.82
 
@@ -41,9 +41,7 @@ class mc_server(commands.Cog):
     embed.add_field(name="Connection Info", value=os.getenv('server'),inline=False)
     embed.add_field(name="Current Status", value=str(onlineview), inline=False)
     embed.add_field(name="Players Online", value=str(players_online) + '/20', inline=False)
-    await ctx.send(embed=embed)
+    await ctx.respond(embed=embed)
 
-
- 
 def setup(client):
   client.add_cog(mc_server(client))

@@ -1,24 +1,22 @@
-import discord
 from discord.ext import commands
 import random
 
+
 class dice_roll(commands.Cog):
-  def __init__(self, client):
+  def __init__(self, client: commands.Bot):
     self.client = client
 
-  @commands.command()
-  async def rollhelp(self, ctx):
-    embed = discord.Embed(title="__Dice Roll Menu__", color=0x1b006e)
-    embed.add_field(name="Dice Types", value="D20 \n D12 \n D10 \n D100 \n D8 \n D6 \n D4 \n\n Use command with **$roll {dice type}  {# of dice}** \n Ex. *$roll 20 3*",inline=False)
-    await ctx.send(embed=embed)
+  @commands.Cog.listener()
+  async def on_ready(self):
+    print('dice_roll Online')
 
-  @commands.command()
+  @commands.slash_command(name='roll', description='rolls a specifed dice')
   async def roll(self, ctx, dicetype=20, dicenum=1):
     if dicenum <= 20:
       for _ in range(dicenum):
-        await ctx.send(random.randint(1, dicetype))
+        await ctx.respond(random.randint(1, dicetype))
     if dicenum > 20:
-      await ctx.send('Invalid number of rolls')
+      await ctx.respond('Invalid number of rolls')
 
-def setup(client):
+def setup(client: commands.Bot):
   client.add_cog(dice_roll(client))

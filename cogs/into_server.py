@@ -7,7 +7,7 @@ class into_server(commands.Cog):
 
   @commands.Cog.listener()
   async def on_ready(self):
-    print('Into_server Online')
+    print('into_server Online')
 
   @commands.Cog.listener()
   async def on_guild_join(self, ctx, guild: discord.Guild) -> None:
