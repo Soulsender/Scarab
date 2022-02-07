@@ -193,7 +193,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "py-cord"
-version = "2.0.0b3"
+version = "2.0.0b1"
 description = "A Python wrapper for the Discord API"
 category = "main"
 optional = false
@@ -298,7 +298,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "580b6f567055ca533b31aa13c5ae0026a09e089b0099c851c6724436298c02ad"
+content-hash = "012100df10510246a571deb19b0fbb35668cc0451e7dc3f5f8a7a2d623f4b1ea"
 
 [metadata.files]
 aiohttp = [
@@ -621,8 +621,8 @@ multidict = [
     {file = "multidict-6.0.2.tar.gz", hash = "sha256:5ff3bd75f38e4c43f1f470f2df7a4d430b821c4ce22be384e1459cb57d6bb013"},
 ]
 py-cord = [
-    {file = "py-cord-2.0.0b3.tar.gz", hash = "sha256:1b8fc69e1f8957dbd98851d9b648cdebcf0c44c1f9891caf85ec372477efd8d7"},
-    {file = "py_cord-2.0.0b3-py3-none-any.whl", hash = "sha256:08df16fce33f0acf0295580971e84c1d12e7586b70c72ec44edb9ccd4cb85f38"},
+    {file = "py-cord-2.0.0b1.tar.gz", hash = "sha256:024cc9abd8e74075ec5b272abc32e6d85be5903f54a04709a3c902dce781c0f2"},
+    {file = "py_cord-2.0.0b1-py3-none-any.whl", hash = "sha256:f0e30686635c4672c80f6f8514ac570e61e2ef8a8e49dd85e36e0c002b14e89b"},
 ]
 python-dotenv = [
     {file = "python-dotenv-0.19.2.tar.gz", hash = "sha256:a5de49a31e953b45ff2d2fd434bbc2670e8db5273606c1e737cc6b93eff3655f"},

@@ -11,7 +11,7 @@ requests = "^2.25.1"
 Markdown = "^3.3.4"
 repltalk = "^1.0.0"
 python-dotenv = "^0.19.2"
-py-cord = "2.0.0b3"
+py-cord = "2.0.0b1"
 
 [tool.poetry.dev-dependencies]
 

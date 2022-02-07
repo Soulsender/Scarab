@@ -14,7 +14,7 @@ class dice_roll(commands.Cog):
   async def roll(self, ctx, dicetype=20, dicenum=1):
     if dicenum <= 20:
       for _ in range(dicenum):
-        await ctx.respond(random.randint(1, dicetype))
+        await ctx.respond(random.randint((1, dicetype)))
     if dicenum > 20:
       await ctx.respond('Invalid number of rolls')
 

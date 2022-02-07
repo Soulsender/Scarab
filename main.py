@@ -7,6 +7,7 @@ load_dotenv()
 bot = discord.Bot(auto_sync_commands=True, activity=discord.Game(name="now with slash commands!"))
 # auto_sync_commands is a total piece of shit
 
+
 bot.load_extension('cogs.dice_roll')
 bot.load_extension('cogs.insults')
 bot.load_extension('cogs.into_server')
