@@ -10,7 +10,7 @@ class dice_roll(commands.Cog):
   async def on_ready(self):
     print('dice_roll Online')
 
-  @commands.slash_command(name='roll', description='rolls a specifed dice')
+  @commands.slash_command(name='roll', description='fucks ur mom')
   async def roll(self, ctx, dicetype=20, dicenum=1):
     if dicenum <= 20:
       for _ in range(dicenum):
