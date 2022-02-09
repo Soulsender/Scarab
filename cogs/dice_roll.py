@@ -10,13 +10,16 @@ class dice_roll(commands.Cog):
   async def on_ready(self):
     print('dice_roll Online')
 
-  @commands.slash_command(name='roll', description='fucks ur mom')
+  @commands.slash_command(name='roll', description='roll a specified dice and dice amount')
   async def roll(self, ctx, dicetype=20, dicenum=1):
+
     if dicenum <= 20:
       for _ in range(dicenum):
-        await ctx.respond(random.randint((1, dicetype)))
+        await ctx.respond(str(random.randint((1, dicetype))))
     if dicenum > 20:
       await ctx.respond('Invalid number of rolls')
+    else:
+      await ctx.respond('Please try again, and specify dice and number.')
 
 def setup(client: commands.Bot):
   client.add_cog(dice_roll(client))

@@ -8,9 +8,9 @@ bot = discord.Bot(auto_sync_commands=True, activity=discord.Game(name="now with 
 # auto_sync_commands is a total piece of shit - always have this enabled
 
 # load cogs
-bot.load_extension('cogs.dice_roll')
+#bot.load_extension('cogs.dice_roll')
 bot.load_extension('cogs.insults')
-bot.load_extension('cogs.into_server')
+#bot.load_extension('cogs.into_server')
 #bot.load_extension('cogs.mc_server')
 
 @bot.slash_command(name='sourcecode', description='you can view the source code for my bot :)')
@@ -24,5 +24,5 @@ async def on_ready():
   print('{0.user} standing by'.format(bot))
   # DO NOT DO **ANYTHING** IN on_ready!
 
-keep_alive()
+#keep_alive()
 bot.run(os.environ['TOKEN'])
