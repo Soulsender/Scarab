@@ -1,5 +1,5 @@
 # **Scarab Discord Bot**
-
+<img src="design.png">
 
 
 #### This is my repository for the custom discord SCARAB bot.
