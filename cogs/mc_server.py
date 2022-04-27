@@ -13,7 +13,6 @@ class mc_server(commands.Cog):
     
   @commands.slash_command(name='server', description='gives infomation about the minecraft server')
   async def server(self, ctx):
-    #https://api.mcsrvstat.us/2/172.105.27.82
 
     def get_serverinfo():
       string = ("https://api.mcsrvstat.us/2/" + os.getenv('SERVER'))
