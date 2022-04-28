@@ -1,10 +1,10 @@
 # **Scarab Discord Bot**
 <img src="design.png">
 
+#### Please use the v1.0.2 release **not** the pycord one, as pycord is incredibly buggy in it's current state, and discord.py v1.3.7 is the only reliable API wrapper at this time.
 
-#### This is my repository for the custom discord SCARAB bot.
 
-### I grant access to use my code, to use and edit. **Please do not pass it along as your own.**
+**I grant access to use my code, to use and edit. Please do not pass it along as your own.**
 
 As of v2, Scarab now uses the pycord API.
 
