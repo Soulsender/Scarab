@@ -1,17 +1,13 @@
 [tool.poetry]
-name = "scarabbot"
+name = "repl_python3_scarabbot"
 version = "0.1.0"
 description = ""
-authors = ["Soulsender <<>>"]
+authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-Flask = "^2.0.1"
-requests = "^2.25.1"
-Markdown = "^3.3.4"
-repltalk = "^1.0.0"
-python-dotenv = "^0.19.2"
-py-cord = "2.0.0b1"
+discord = "^1.0.1"
+flask = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 
