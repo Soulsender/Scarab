@@ -3,7 +3,9 @@ import os
 from keep_alive import keep_alive
 from discord.ext import commands
 
-client = commands.Bot(command_prefix="$", activity = discord.Game(name="$help"))
+intents = discord.Intents.default()
+intents.members = True
+client = commands.Bot(command_prefix="$", activity = discord.Game(name="$help"), intents=intents)
 client.remove_command('help')
 
 
@@ -23,6 +25,12 @@ for filename in os.listdir('./cogs'):
 async def on_ready():
   print('{0.user} standing by'.format(client))
   # DO NOT DO ANYTHING IN on_ready!
+ 
+@client.event
+async def on_member_join(member):
+  print("user joined")
+  verify_channel = client.get_channel("channel_id")
+  await verify_channel.send(f"@{member}, to verify, use the `/verify` command!")
 
 @client.command()
 async def sourcehelp(ctx):
