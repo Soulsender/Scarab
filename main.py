@@ -1,10 +1,13 @@
 import discord
 import os
-from keep_alive import keep_alive
 from discord.ext import commands
+from dotenv import load_dotenv
+
+load_dotenv()
 
 intents = discord.Intents.default()
 intents.members = True
+intents.messages = True
 client = commands.Bot(command_prefix="$", activity = discord.Game(name="$help"), intents=intents)
 client.remove_command('help')
 
@@ -53,5 +56,11 @@ async def mimic(ctx, *, question):
     await ctx.message.delete()
     await ctx.send(f'{question}')
 
-keep_alive()
-client.run(os.getenv('TOKEN'))
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+      return
+  if message.author.id == 259947663821111306:
+      await message.channel.send('🤓')
+
+client.run(str(os.getenv('TOKEN')))
