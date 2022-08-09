@@ -53,14 +53,18 @@ async def help(ctx):
 @client.command()
 @commands.has_role('Bot Admin') # Checks for Administrator rank.
 async def mimic(ctx, *, question):
-    await ctx.message.delete()
-    await ctx.send(f'{question}')
+  await ctx.message.delete()
+  await ctx.send(f'{question}')
 
 @client.event
 async def on_message(message):
   if message.author == client.user:
-      return
+    return
+  # number is the user ID of the victim
   if message.author.id == 259947663821111306:
-      await message.channel.send('🤓')
+    await message.channel.send('🤓')
+  if "arch" in message.content:
+    await message.channel.send('🤓')
+    await message.channel.send('i uSe ArCh bTW!!!1!11')
 
 client.run(str(os.getenv('TOKEN')))
