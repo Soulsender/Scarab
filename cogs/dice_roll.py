@@ -6,6 +6,10 @@ class dice_roll(commands.Cog):
   def __init__(self, client):
     self.client = client
 
+  @commands.Cog.listener()
+  async def on_ready(self):
+    print(__file__)
+
   @commands.command()
   async def rollhelp(self, ctx):
     embed = discord.Embed(title="__Dice Roll Menu__", color=0x1b006e)

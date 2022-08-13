@@ -7,7 +7,7 @@ class insults(commands.Cog):
 
   @commands.Cog.listener()
   async def on_ready(self):
-    print('Insults Online')
+    print(__file__)
     
   @commands.command()
   async def insult(self, ctx):

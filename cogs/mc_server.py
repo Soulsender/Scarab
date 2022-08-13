@@ -9,11 +9,10 @@ class mc_server(commands.Cog):
 
   @commands.Cog.listener()
   async def on_ready(self):
-    print('Use Online')
+    print(__file__)
     
   @commands.command()
   async def server(self, ctx):
-    #https://api.mcsrvstat.us/2/172.105.27.82
 
     def get_serverinfo():
       string = ("https://api.mcsrvstat.us/2/" + os.getenv('SERVER'))
