@@ -1,11 +1,19 @@
 import discord
 import os
-from keep_alive import keep_alive
 from discord.ext import commands
+
 from colorama import Fore
 
 intents = discord.Intents.default()
 intents.members = True
+from dotenv import load_dotenv
+
+load_dotenv()
+
+intents = discord.Intents.default()
+intents.members = True
+intents.messages = True
+
 client = commands.Bot(command_prefix="$", activity = discord.Game(name="$help"), intents=intents)
 client.remove_command('help')
 
@@ -37,6 +45,14 @@ async def on_ready():
 async def mimic(ctx, *, question):
   await ctx.message.delete()
   await ctx.send(f'{question}')
+  print('{0.user} standing by'.format(client))
+  # DO NOT DO ANYTHING IN on_ready!
+ 
+@client.event
+async def on_member_join(member):
+  print("user joined")
+  verify_channel = client.get_channel("channel_id")
+  await verify_channel.send(f"@{member}, to verify, use the `/verify` command!")
 
 @client.event
 async def on_member_join(member):
@@ -83,6 +99,20 @@ async def servers(ctx):
   servers = list(client.guilds)
   await ctx.send(f"Connected on {str(len(servers))} servers:")
   await ctx.send('\n'.join(guild.name for guild in client.guilds))
+@commands.has_role('Bot Admin') # Checks for Administrator rank.
+async def mimic(ctx, *, question):
+  await ctx.message.delete()
+  await ctx.send(f'{question}')
 
-keep_alive()
-client.run(os.getenv('TOKEN'))
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+  # number is the user ID of the victim
+  if message.author.id == 259947663821111306:
+    await message.channel.send('🤓')
+  if "arch" in message.content:
+    await message.channel.send('🤓')
+    await message.channel.send('i uSe ArCh bTW!!!1!11')
+
+client.run(str(os.getenv('TOKEN')))
