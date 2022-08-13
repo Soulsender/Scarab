@@ -7,8 +7,8 @@ class into_server(commands.Cog):
 
   @commands.Cog.listener()
   async def on_ready(self):
-    print('Into_server Online')
-
+    print(__file__)
+    
   @commands.Cog.listener()
   async def on_guild_join(self, ctx, guild: discord.Guild) -> None:
     embed = discord.Embed(title="Hello!", color=0xeb4034)
